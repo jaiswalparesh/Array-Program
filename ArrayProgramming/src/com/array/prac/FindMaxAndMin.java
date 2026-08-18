@@ -1,36 +1,30 @@
+/*Program to Find Maximum and Minimum Elements in an Array
+
+Example:
+Input: arr[] = {10, 22, 12, 3, 0, 6}
+Output: Max: 22 Min: 0
+
+Steps to Find Maximum and Minimum Elements in an Array:
+1. Create a variable to store the maximum and minimum value of the array and initialize them to the minimum and maximum possible integer values respectively.
+2. Iterate through the array and update the max and min variables accordingly.
+*/
 package com.array.prac;
 
 public class FindMaxAndMin {
 	public static void main(String[] args) {
-		//int intArr[] = { 1, 6, 9, 10, 2 };
-		int intArr[] = {1,-1,0};
-
-		FindMaxAndMin maxAndMin = new FindMaxAndMin();
-		maxAndMin.findMaxAndMin(intArr);
-
-	}
-
-	private void findMaxAndMin(int[] intArr) {
-		int max = Integer.MIN_VALUE;
-		int min = Integer.MAX_VALUE;
-
-		for (int i : intArr) {
-			if (i > max) {
-				max = i;	
-			} else if (i < min) {
-				min = i;
-			}
-		}
-		System.out.println("Max value: " + max + " and min value: " + min);
-	}
+		 int arr[] = {10, 22, 12, 3, 0, 6};
+        //create a variable to store the maximum and minimum value of the array
+        //and initialize them to the minimum and maximum possible integer values respectively
+        int max = Integer.MIN_VALUE;
+        int min= Integer.MAX_VALUE;
+        //iterate through the array and update the max and min variables accordingly
+        for (int i : arr) {
+            if(i > max) {
+                max = i;
+            } else if (i < min) {
+                min = i;
+            }
+        }
+        //print the maximum and minimum values of the array
+        System.out.println("Max: " + max + " Min: " + min);
 }
-/*int largest = Integer.MIN_VALUE; 
-int smallest = Integer.MAX_VALUE; 
-for (int number : numbers) 
-{ if (number > largest)
-{ largest = number; } 
-else if (number < smallest) 
-{ smallest = number; } 
-}
-
-Read more: http://www.java67.com/2014/02/how-to-find-largest-and-smallest-number-array-in-java.html#ixzz5lju9bjKx*/
